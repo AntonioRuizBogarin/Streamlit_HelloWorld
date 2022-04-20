@@ -23,7 +23,7 @@ st.write(df)
 
 # Example 4
 
-st.write('Below is a DataFrame:', df, 'Above is a dataframe.')
+st.write('DataFrame is Below:', df, 'Dataframe is above.')
 
 # Example 5
 
