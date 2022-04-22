@@ -1,0 +1,9 @@
+altair
+numpy
+pandas
+streamlit
+snowflake-connector-python
+pyarrow==6.0.1
+pandas_profiling
+streamlit_pandas_profiling
+datetime
