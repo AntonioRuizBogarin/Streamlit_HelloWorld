@@ -127,11 +127,53 @@ if cola:
      st.write("Here you go 🥤")
 
 
+## st.latex #####
+
+st.header('st.latex')
+
+st.latex(r'''
+     a + ar + a r^2 + a r^3 + \cdots + a r^{n-1} =
+     \sum_{k=0}^{n-1} ar^k =
+     a \left(\frac{1-r^{n}}{1-r}\right)
+     ''')
+
+st.title('Customizing the theme of Streamlit apps')
+
+number = st.sidebar.slider('Select a number:', 0, 10, 5)
+st.write('Selected number from slider widget is:', number)
+
+
+#### st.secrets ####
+
+st.title('st.secrets')
+
+st.write(st.secrets['message'])
+
+
+#### File Uploader #####
+
+st.title('st.file_uploader')
+
+st.subheader('Input CSV')
+uploaded_file = st.file_uploader("Choose a file")
+
+if uploaded_file is not None:
+  df = pd.read_csv(uploaded_file)
+  st.subheader('DataFrame')
+  st.write(df)
+  st.subheader('Descriptive Statistics')
+  st.write(df.describe())
+else:
+  st.info('☝️ Upload a CSV file')
+
+
+
 ### Installing Components ############
 
-st.header('`streamlit_pandas_profiling`')
+#st.header('`streamlit_pandas_profiling`')
 
-df = pd.read_csv('https://raw.githubusercontent.com/dataprofessor/data/master/penguins_cleaned.csv')
+#df = pd.read_csv('https://raw.githubusercontent.com/dataprofessor/data/master/penguins_cleaned.csv')
+#print(df)
 
-pr = df.profile_report()
-st_profile_report(pr)
+#pr = df.profile_report()
+#st_profile_report(pr)
