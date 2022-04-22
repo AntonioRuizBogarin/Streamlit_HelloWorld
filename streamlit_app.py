@@ -6,6 +6,10 @@ import pandas_profiling
 from datetime import time, datetime
 from streamlit_pandas_profiling import st_profile_report
 
+
+st.set_page_config(layout="wide")
+
+
 st.header('st.write')
 
 # Example 1
@@ -181,8 +185,6 @@ st_profile_report(pr)
 
 
 ### StreamLit App Layout ######
-
-st.set_page_config(layout="wide")
 
 st.title('How to layout your Streamlit app')
 
